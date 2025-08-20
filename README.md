@@ -54,3 +54,17 @@ npm start
 ```bash
 npm run server
 ```
+## 🚀 How to Use
+
+- **📋 Sign up as Applicant:** Upload resumes, certificates, and projects.
+
+- **🌐 Enter Company URL + Role:** Get AI-generated company insights and job fit score.
+
+3. **📊 Check Career Dashboard:** See strengths, missing skills, and improvement suggestions.
+
+4. **👩‍💼 Recruiters Sign Up:** Post job roles, search candidates, and connect directly.
+
+5. **🤖 AI Matchmaking:** Recruiters see candidate fit scores, applicants get tailored preparation.
+
+## 📜 License
+This project is licensed under the `MIT License`.
