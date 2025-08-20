@@ -143,8 +143,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative bg-gradient-to-br from-orange-400 to-pink-400 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=500&width=400"
-                  alt="Professional candidate"
+                  src="/hero-section.png"
+                  alt="Professional candidates using HRCalls platform"
                   className="w-full h-auto rounded-2xl"
                 />
                 <div className="absolute -top-4 -right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg">
@@ -319,8 +319,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-400 to-purple-500 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=400&width=350"
-                  alt="Profile building"
+                  src="/profile-section.png"
+                  alt="User building profile with resume analysis"
                   className="w-full h-auto rounded-2xl"
                 />
               </div>
