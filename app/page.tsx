@@ -398,7 +398,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Amanda Gonzalez",
+                name: "Bikram Mondal",
                 role: "Product Manager",
                 company: "Tech Startup",
                 content:
@@ -406,7 +406,7 @@ export default function HomePage() {
                 avatar: "/placeholder.svg?height=60&width=60",
               },
               {
-                name: "Jacob Joshua",
+                name: "Somyadip Roy",
                 role: "Chief Executive",
                 company: "Fortune 500",
                 content:
@@ -414,7 +414,7 @@ export default function HomePage() {
                 avatar: "/placeholder.svg?height=60&width=60",
               },
               {
-                name: "Sarah Johnson",
+                name: "Anidipta Roy",
                 role: "UX Designer",
                 company: "Design Agency",
                 content:
