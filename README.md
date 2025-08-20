@@ -34,23 +34,23 @@ Recruiters can discover skilled candidates, verify credentials, and directly con
 
 ## ⚙️ Installation  
 
+### Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/your-username/ai-career-assistant.git
 ```
-# Navigate to project folder
+### Navigate to project folder
 ```bash
 cd ai-career-assistant
 ```
-# Install dependencies
+### Install dependencies
 ```bash
 npm install   # for frontend/backend
 ```
-# Run frontend
+### Run frontend
 ```bash
 npm start
 ```
-# Run backend
+### Run backend
 ```bash
 npm run server
 ```
