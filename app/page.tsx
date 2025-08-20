@@ -314,7 +314,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-400 to-blue-500 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=400&width=350"
+                  src="/profile-section.png"
                   alt="Profile building"
                   className="w-full h-auto rounded-2xl"
                 />
@@ -399,46 +399,42 @@ export default function HomePage() {
                 avatar: "/placeholder.svg?height=60&width=60",
               },
               {
-                name: "Jacob Joshua",
-                role: "Chief Executive",
-                company: "Fortune 500",
+                name: "Michael Chen",
+                role: "Software Engineer",
+                company: "Enterprise Corp",
                 content:
-                  "The platform's ability to match candidates with company culture is outstanding. We found our best hires through HRCalls.",
+                  "The resume analysis feature gave me actionable feedback that helped me land interviews at top companies.",
                 avatar: "/placeholder.svg?height=60&width=60",
               },
               {
                 name: "Sarah Johnson",
-                role: "UX Designer",
-                company: "Design Agency",
+                role: "Marketing Director",
+                company: "Agency Inc",
                 content:
-                  "The AI-powered resume analysis helped me optimize my profile and land interviews at top companies. Highly recommended!",
+                  "As a hiring manager, HRCalls has streamlined our recruitment process and helped us find candidates who truly fit our culture.",
                 avatar: "/placeholder.svg?height=60&width=60",
               },
             ].map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
-                  <div className="flex items-center gap-4">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
                     <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.avatar || "/placeholder.svg"} />
-                      <AvatarFallback>
-                        {testimonial.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </AvatarFallback>
+                      <AvatarImage src={testimonial.avatar} />
+                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.role}</div>
-                      <div className="text-xs text-gray-500">{testimonial.company}</div>
+                      <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.role} at {testimonial.company}
+                      </p>
                     </div>
                   </div>
+                  <div className="flex mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600">"{testimonial.content}"</p>
                 </CardContent>
               </Card>
             ))}
@@ -447,102 +443,111 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Start your journey with HRCalls today</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Career Journey?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Join thousands of professionals who have found their dream jobs through our AI-powered platform.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-medium"
+          >
+            Get Started Now <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent mb-4">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
                 HRCalls
               </h3>
-              <p className="text-gray-400 mb-6 max-w-md">
-                AI-powered recruitment platform connecting talented professionals with their dream opportunities.
+              <p className="text-gray-400 mb-4">
+                AI-powered platform connecting skilled applicants with recruiters through intelligent matching.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer transition-colors">
-                  <span className="text-sm font-bold">in</span>
-                </div>
-                <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer transition-colors">
-                  <span className="text-sm font-bold">tw</span>
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer transition-colors">
-                  <span className="text-sm font-bold">gh</span>
-                </div>
-              </div>
             </div>
-
             <div>
-              <h4 className="font-semibold mb-4">Platform</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-lg font-semibold mb-4">For Applicants</h4>
+              <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Home
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Create Profile
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Features
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Browse Jobs
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Recruiters
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    AI Resume Analysis
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Applicants
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    About
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Career Resources
                   </a>
                 </li>
               </ul>
             </div>
-
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-lg font-semibold mb-4">For Recruiters</h4>
+              <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Post Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Talent Search
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    AI Matching
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Hiring Solutions
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
                     Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Cookie Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 HRCalls. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HRCalls. All rights reserved.</p>
           </div>
         </div>
       </footer>
